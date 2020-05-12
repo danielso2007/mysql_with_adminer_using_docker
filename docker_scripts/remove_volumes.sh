@@ -24,4 +24,6 @@ echo -e "${YELLOW}Removendo container...${NC}"
 docker-compose rm -f
 echo -e "${YELLOW}Removendo volumes ...${NC}"
 docker volume rm mysql_mysqlconf mysql_mysqldblogs mysql_mysqllib
+docker network rm mysql_mysql-network
 docker volume ls
+docker network ls
