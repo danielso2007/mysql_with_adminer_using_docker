@@ -18,10 +18,10 @@ WHITE='\033[1;37m'
 NC='\033[0m' # No Color
 echo -e "${YELLOW}Parando container...${NC}"
 cd ..
-docker-compose stop
-docker-compose ps
+docker compose stop
+docker compose ps
 echo -e "${YELLOW}Removendo container...${NC}"
-docker-compose rm -f
+docker compose rm -f
 echo -e "${YELLOW}Removendo volumes ...${NC}"
 docker volume rm mysql_with_adminer_using_docker_mysqlconf mysql_with_adminer_using_docker_mysqldblogs mysql_with_adminer_using_docker_mysqllib
 docker network rm mysql_with_adminer_using_docker_mysql-network
